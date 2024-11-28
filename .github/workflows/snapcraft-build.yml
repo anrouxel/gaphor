@@ -1,0 +1,14 @@
+name: Full Build
+
+permissions:
+  contents: read
+
+on:
+  push:
+jobs:
+  linux-snapcraft-devel:
+    name: Linux (Devel Snapcraft)
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🧪 Build snap on amd64
+        uses: snapcrafters/ci/test-snap-build@main
